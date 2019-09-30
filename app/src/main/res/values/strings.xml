@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">midprojectver2</string>
+    <string name="kakao_app_key">5799da66ff88725987f6b02ef665899c</string>
+    <string name="kakao_scheme">5799da66ff88725987f6b02ef665899c</string>
+    <string name="kakaolink_host">kakaolink</string>
+
+
+</resources>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+        <ImageButton
+            android:id="@+id/imageView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/cont"
+            tools:layout_editor_absoluteX="0dp"
+            tools:srcCompat="@tools:sample/avatars[2]" />
+        <LinearLayout
+            android:id="@+id/cont"
+            app:layout_constraintLeft_toRightOf="@id/imageView"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tit"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:text="제목"
+                />
+            <EditText
+                android:id="@+id/etit"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                />
+            <TextView
+                android:id="@+id/ccon"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:text="내용"
+                />
+            <EditText
+                android:id="@+id/eccon"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                />
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/emap"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        tools:context=".extra" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:text="POST"
+        android:onClick="post"
+        />
+
+
+</LinearLayout>
